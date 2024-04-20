@@ -18,7 +18,7 @@ const Skills = ({ darkMode }) => {
             <Container>
                 <Row style={{ display: 'flex', flexWrap: 'wrap', marginRight: '-15px', marginLeft: '-15px', justifyContent: 'center' }}>
                     <Col lg={5} xs={8}>
-                        <Slide autoplay={true} duration={2000} style={{ height: '456px', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <Slide autoplay={true} duration={3000} style={{ height: '456px', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             {slideData.map((data, index) => (
                                 <div key={index} style={{ height: '100%', overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
                                     <img
