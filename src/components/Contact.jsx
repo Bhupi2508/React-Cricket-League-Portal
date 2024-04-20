@@ -1,5 +1,5 @@
 import { useState, React } from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import swal from 'sweetalert';
 import contactLight from '../media/contact-light.svg';
 import contactDark from '../media/contact-dark.svg';
@@ -19,44 +19,25 @@ const Contact = ({ darkMode }) => {
     const onInputChange = e => {
         setTemplateParams({ ...templateParams, [e.target.name]: e.target.value })
     }
+
     const onSubmit = async (e) => {
         e.preventDefault();
-        const endpoint = window.location.hostname === 'localhost' ?
-            'http://localhost:8888/.netlify/functions/sendEmail' :
-            '/.netlify/functions/sendEmail';
-
-        const response = await fetch(endpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                userId: process.env.REACT_APP_EMAILJS_USER_ID,
-                templateParams,
-            }),
+        emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams, process.env.REACT_APP_EMAILJS_USER_ID)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
+        swal({
+            title: "Sent Successfully!",
+            text: "Glad to hear from you! We will get back to you as soon possible",
+            icon: "success",
         });
-
-        const data = await response.json();
-        console.log(data);
-
-        if (response.ok) {
-            swal({
-                title: 'Sent Successfully!',
-                text: 'Glad to hear from you! We will get back to you as soon as possible',
-                icon: 'success',
-            });
-            setTemplateParams({ from_name: '', message: '' });
-        } else {
-            swal({
-                title: 'Failed to Send',
-                text: 'There was an error sending your message. Please try again later.',
-                icon: 'error',
-            });
-        }
-    };
-
+        setTemplateParams({
+            from_name: '',
+            message: ''
+        })
+    }
 
     return (
         <div data-theme={darkMode ? "dark" : "light"}>
