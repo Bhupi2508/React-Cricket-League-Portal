@@ -20,7 +20,7 @@ function App() {
     <Router>
       <div className="App" data-theme={darkMode ? "dark" : "light"}>
         <Route path="/">
-          <Navbar expand="lg" className="navbar" data-theme={darkMode ? "light" : "light"} style={{ backgroundColor: 'powderblue' }}>
+          <Navbar expand="lg" className={`navbar ${darkMode ? 'dark' : 'light'}`} style={{ backgroundColor: darkMode ? '#1a1a1d' : '#FFEFEF' }}>
             <Navbar.Brand href="#home" className="navname">Cricket League</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

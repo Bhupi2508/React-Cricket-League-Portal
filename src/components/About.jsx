@@ -82,9 +82,11 @@ const About = ({ darkMode }) => {
                   <Card.Title><h2 className="lead">Let's have an introduction!</h2></Card.Title>
                   <br></br>
                   <Card.Text>
-                    <p style={{ marginTop: '30px', marginBottom: '3rem' }}>Welcome to the <strong>Pratap Nagar Cricket League!</strong> The league will be held at Pratap Nagar and will feature teams selected through an <strong>auction</strong>. The <strong>winning and runner-up teams</strong> will receive trophies, and individual awards will be given to the <strong>best batsman, best bowler, and man of the series</strong>. Additionally, the winning and runner-up teams will receive <strong>medals</strong>. <strong>Entry fees</strong> will apply for each player. The <strong>team fees, players, timings, dates, and match lists</strong> will be decided later once we receive confirmation from Captain Shab. <strong>Team owners</strong> will have the opportunity to buy their own teams in the auction.</p>
-                    <p>Now that you know about the league, please feel free to drop us a message <div className=""></div> <p style={{ color: 'darkgreen', 'font': 'inherit', 'font-size': 'larger' }}>Please connect with the management team for more info.</p></p>
-                  </Card.Text >
+                    <p>Welcome to the <span style={{ color: 'green' }}>Pratap Nagar Cricket League (PNCL)!</span> The PNCL is a prestigious cricket tournament held in <span style={{ color: 'green' }}>Pratap Nagar, Sector 10</span>. Teams are selected through an exciting auction process.</p>
+                    <p>The <span style={{ color: 'green' }}>winning and runner-up teams</span> receive trophies, medals, and prize money. Individual awards include <span style={{ color: 'green' }}>best batsman, best bowler, and Man of the Series</span>. <span style={{ color: 'teal' }}>Captain Shab (Anuj Faujdar)</span> leads the teams.</p>
+                    <p>Team owners build their dream teams through the auction. Entry fees apply for each player, contributing to the prize pool. The league schedule will be announced soon.</p>
+                    <p>For more information, connect with the management team. Get ready for exciting cricket action!</p>
+                  </Card.Text>
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <a style={{ marginRight: '13px' }} href="https://www.instagram.com/the____anuj_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer noopener">
                       <Button style={{ background: 'border-box', fontWeight: '600' }} variant={darkMode ? "outline-light" : "outline-dark"} className='a'>

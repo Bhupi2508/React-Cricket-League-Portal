@@ -1,7 +1,7 @@
 :root{
-    --bg-color: #eae7dc;
+    --bg-color: #FFEFEF;
     --text-color: #000000;
-    --page-color: #eae7dc;
+    --page-color: #FFEFEF;
     --hello: #8e8d8a;
     --description: #e85a4f;
     --name: #e98074;
@@ -12,7 +12,7 @@
     --bg-color: #1a1a1d;
     --text-color: #ffffff;
     --page-color: #1a1a1f;
-    --description: #eae7dc;
+    --description: #41B06E;
     --hello: #ffffff;
     --name: #c3073f;
     --border-width: 2px;
@@ -112,8 +112,8 @@ strong, .with{
     margin-top: 15px;
 }
 .skills-img{
-    margin-left: 60px;
-    margin-top: 30px;
+    /* margin-left: 60px; */
+    margin-top: 32px;
     /* height: 150px;
     width: auto; */
 }

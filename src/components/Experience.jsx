@@ -1,7 +1,7 @@
 // import { useState } from 'react';
 import { Zoom, Fade } from 'react-awesome-reveal';
 import LazyLoad from 'react-lazyload';
-import cardsData from './cardsData';
+import { cardsData } from './cardsData';
 
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
@@ -9,10 +9,6 @@ import Col from 'react-bootstrap/esm/Col';
 import Card from 'react-bootstrap/esm/Card';
 
 const Experience = ({ darkMode }) => {
-    // const [setShow] = useState(false);
-
-    // // const handleClose = () => setShow(false);
-    // // const handleShow = () => setShow(true);
 
     return (
         <div data-theme={darkMode ? "dark" : "light"}>

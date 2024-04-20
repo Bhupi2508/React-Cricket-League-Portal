@@ -1,6 +1,6 @@
 import React from 'react'
 import { AttentionSeeker } from 'react-awesome-reveal';
-import jecrcImg from '../media/ee.jpg';
+import jecrcImg from '../media/456.avif';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/esm/Row';
 import Button from 'react-bootstrap/Button'
