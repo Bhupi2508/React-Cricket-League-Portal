@@ -1,5 +1,5 @@
 import { useState, React } from 'react';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import swal from 'sweetalert';
 import contactLight from '../media/contact-light.svg';
 import contactDark from '../media/contact-dark.svg';
